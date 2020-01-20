@@ -5,22 +5,49 @@
 <title>Buton Yakalama Oyunu</title>
 <style>
 	#nesne{
-		width: 100px;
-		height: 100px;
+		width: 10px;
+		height: 10px;
 		position:absolute;
 		background:#36A4FF;
 	}
+	#cisim{
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		background:#00ACC1;
+		}
 </style>
 </head>
 
 <body>
 
 	<button id="nesne"></button>
+	<button id="cisim"></button>
 
 	<script>
+
+	
+	var yanlış=0;
+	var cisim=document.getElementById("cisim");
 		var sayac=0;
 		var nesne=document.getElementById("nesne");
+cisim.onmouseover=function (e) {
+	yanlış++;
+	var xpos=parseInt(Math.random()*500);
+	var ypos=parseInt(Math.random()*400);
 
+	cisim.style.left=xpos +"px";
+	cisim.style.top =ypos+"px";
+	cisim.style.width=this.clientWidth+25+"px";
+	cisim.style.height=this.clientHeight+25+"px";
+}
+cisim.onclick=function()
+{
+	window.alert(yanlış+" Seferde Yanlış Yaptın");
+	cisim.style.width="px";
+	cisim.style.height="px";
+	yanlış=0;
+}
 		nesne.onmouseover=function(e)
 		{
 			sayac++;
@@ -29,14 +56,14 @@
 
 			nesne.style.left=xpos +"px";
 			nesne.style.top =ypos+"px";
-			nesne.style.width=this.clientWidth+10+"px";
-			nesne.style.height=this.clientHeight+10+"px";
+			nesne.style.width=this.clientWidth+5+"px";
+			nesne.style.height=this.clientHeight+5+"px";
 		}
 		nesne.onclick=function()
 		{
 			window.alert(sayac+" Seferde Yakalandı");
-			nesne.style.width="100px";
-			nesne.style.height="100px";
+			nesne.style.width="px";
+			nesne.style.height="px";
 			sayac=0;
 		}
 	</script>
