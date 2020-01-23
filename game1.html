@@ -16,6 +16,12 @@
 		position: absolute;
 		background:#00ACC1;
 		}
+		#madde{
+			width: 60px;
+			height: 60px;
+			position: absolute;
+			background:#4FC3F7;
+			}
 </style>
 </head>
 
@@ -23,10 +29,27 @@
 
 	<button id="nesne"></button>
 	<button id="cisim"></button>
+	<button id="madde"></button>
 
 	<script>
 
-	
+		var hatta=0;
+		var madde=document.getElementById("madde");
+		madde.onmouseover=function (e) {
+			hatta++;
+			var xpos=parseInt(Math.random()*500);
+			var ypos=parseInt(Math.random()*400);
+
+			madde.style.left=xpos +"px";
+			madde.style.top =ypos+"px";
+			madde.style.width=this.clientWidth+40+"px";
+			madde.style.height=this.clientHeight+40+"px";
+		}
+		madde.onclick=function()
+		{
+			window.alert(hatta+" kere Oyun Bitti!");
+
+		}
 	var yanlış=0;
 	var cisim=document.getElementById("cisim");
 		var sayac=0;
@@ -44,6 +67,11 @@ cisim.onmouseover=function (e) {
 cisim.onclick=function()
 {
 	window.alert(yanlış+" Seferde Yanlış Yaptın");
+
+
+
+
+
 	cisim.style.width="px";
 	cisim.style.height="px";
 	yanlış=0;
@@ -66,6 +94,7 @@ cisim.onclick=function()
 			nesne.style.height="px";
 			sayac=0;
 		}
+
 	</script>
   <button type="btn5" onclick="window.location='index.html';"class="btn btn-warning">Exit</button>
 
