@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Hesap Makinesi</title>
   </head>
-  <body>
+  <body style="background-color:DodgerBlue;">
     <form name="Hesap">
       <label>1. Sayı : </label>
       <input type="text" id="sayi1"><br><br>
@@ -15,10 +15,15 @@
             <input type="button" id="btnBöl" value="BÖL">
             <input type="button" id="btnCıkar" value="CIKAR">
             <input type="button" id="btnCarp" value="CARP">
+              <input type="button" id="btnC" value="C">
         </form>
         <br>
         <div id="kutuToplam"></div>
-    <script>
+    <script>var btnC=document.getElementById("btnC");
+  btnC.onclick=function()
+ {
+  window.location.reload()
+ }
       var btn=document.getElementById("btnTopla");
       btn.onclick=function(){
           var s1=Number(document.getElementById("sayi1").value);
@@ -36,29 +41,29 @@
           var s2=Number(document.getElementById("sayi2").value);
           var cikar=s1-s2;
 
-          document.getElementById("kutuFark").innerHTML="Girilen Sayıların Toplamı : "+cikar;
+          document.getElementById("kutuFark").innerHTML="Girilen Sayıların Farkı : "+cikar;
       }
         </script>
         <div id="kutuBöl"></div>
     <script>
-      var btn=document.getElementById("btnTopla");
-      btn.onclick=function(){
+      var btn2=document.getElementById("btnBöl");
+      btn2.onclick=function(){
           var s1=Number(document.getElementById("sayi1").value);
           var s2=Number(document.getElementById("sayi2").value);
-          var toplam=s1+s2;
+          var bölüm=s1/s2;
 
-          document.getElementById("kutuToplam").innerHTML="Girilen Sayıların Toplamı : "+toplam;
+          document.getElementById("kutuBöl").innerHTML="Girilen Sayıların Bölümü : "+bölüm;
       }
         </script>
         <div id="kutuCarp"></div>
     <script>
-      var btn=document.getElementById("btnTopla");
-      btn.onclick=function(){
+      var btn3=document.getElementById("btnCarp");
+      btn3.onclick=function(){
           var s1=Number(document.getElementById("sayi1").value);
           var s2=Number(document.getElementById("sayi2").value);
-          var toplam=s1+s2;
+          var carp=s1*s2;
 
-          document.getElementById("kutuToplam").innerHTML="Girilen Sayıların Toplamı : "+toplam;
+          document.getElementById("kutuCarp").innerHTML="Girilen Sayıların Carpımı : "+carp;
       }
         </script>
   </body>
