@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Alan hesaplama</title>
+  </head>
+  <body style="background-color:DodgerBlue;">
+    <form name="Hesap">
+      <label>1. Sayı : </label>
+      <input type="text" id="sayi1"><br><br>
+            <label>2. Sayı : </label>
+            <input type="text" id="sayi2"><br><br>
+            <input type="button" id="btnA" value="ALAN">
+              <input type="button" id="btnC" value="C">
+        </form>
+        <br>
+        <div id="kutuAlan"></div>
+    <script>var btn1=document.getElementById("btnA");
+          var btnC=document.getElementById("btnC");
+    btnC.onclick=function()
+   {
+    window.location.reload()
+   }
+      var btn1=document.getElementById("btnA");
+      btn1.onclick=function(){
+          var s1=Number(document.getElementById("sayi1").value);
+          var s2=Number(document.getElementById("sayi2").value);
+          var alan=s1*s2;
+
+          document.getElementById("kutuAlan").innerHTML="Girilen Sayıların Alanı : "+alan;
+
+      }
+        </script>
+        <button type="btn5" onclick="window.location='math.html';"class="btn btn-warning">Exit</button>
+
+</body>
+</html>

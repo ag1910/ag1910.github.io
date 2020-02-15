@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>yüzde hesaplama</title>
+  </head>
+  <body style="background-color:DodgerBlue;">
+    <form name="Hesap">
+      <label>1. Sayı : </label>
+      <input type="text" id="sayi1"><br><br>
+            <label>2. Sayı : </label>
+            <input type="text" id="sayi2"><br><br>
+            <input type="button" id="btn1" value="x'in %y'si kactır?">
+                    <input type="button" id="btn3" value="x, %y kadar azaltılırsa kaç olur?">
+                        <input type="button" id="btn4" value="x, %y kadar artırılırsa kaç olur?">
+
+              <input type="button" id="btnC" value="C">
+        </form>
+        <br>
+        <div id="kutuAlan"></div>
+    <script>var btn1=document.getElementById("btn1");
+          var btnC=document.getElementById("btnC");
+    btnC.onclick=function()
+   {
+    window.location.reload()
+   }
+      btn1.onclick=function(){
+          var s1=Number(document.getElementById("sayi1").value);
+          var s2=Number(document.getElementById("sayi2").value);
+          var yüzde=s1*s2/100;
+
+          document.getElementById("kutuAlan").innerHTML="Sonuç : "+yüzde;
+
+      }
+              </script>
+      <div id="kutuFark"></div>
+      <script>
+      var btn3=document.getElementById("btn3");
+      btn3.onclick=function(){
+          var s1=Number(document.getElementById("sayi1").value);
+          var s2=Number(document.getElementById("sayi2").value);
+          var fark=s1-s1*s2/100;
+
+          document.getElementById("kutuFark").innerHTML="Sonuç : "+fark;
+
+      }
+              </script>
+      <div id="kutuToplam"></div>
+      <script>
+      var btn4=document.getElementById("btn4");
+      btn4.onclick=function(){
+          var s1=Number(document.getElementById("sayi1").value);
+          var s2=Number(document.getElementById("sayi2").value);
+          var toplam=s1+s1*s2/100;
+
+          document.getElementById("kutuToplam").innerHTML="Sonuç : "+toplam;
+
+      }
+        </script>
+
+        <button type="btn5" onclick="window.location='math.html';"class="btn btn-warning">Exit</button>
+
+</body>
+</html>

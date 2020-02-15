@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hacim hesaplama</title>
+  </head>
+  <body style="background-color:DodgerBlue;">
+    <form name="Hesap">
+      <label>1. Sayı : </label>
+      <input type="text" id="sayi1"><br><br>
+            <label>2. Sayı : </label>
+            <input type="text" id="sayi2"><br><br>
+            <label>3. Sayı : </label>
+            <input type="text" id="sayi3"><br><br>
+            <input type="button" id="btnH" value="HACİM">
+              <input type="button" id="btnC" value="C">
+        </form>
+        <br>
+        <div id="kutuHacim"></div>
+    <script>
+          var btnC=document.getElementById("btnC");
+    btnC.onclick=function()
+   {
+    window.location.reload()
+   }
+      var btn1=document.getElementById("btnH");
+      btn1.onclick=function(){
+          var s1=Number(document.getElementById("sayi1").value);
+          var s2=Number(document.getElementById("sayi2").value);
+          var s3=Number(document.getElementById("sayi3").value);
+          var hacim=s1*s2*s3;
+
+          document.getElementById("kutuHacim").innerHTML="Girilen Sayıların Hacmi : "+hacim;
+
+      }
+        </script>
+        <button type="btn5" onclick="window.location='math.html';"class="btn btn-warning">Exit</button>
+
+</body>
+</html>
