@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>sıcaklık hesaplama</title>
+  </head>
+  <body style="background-color:DodgerBlue;">
+    <form name="Hesap">
+      <label>Fahrenhayt : </label>
+      <input type="text" id="sayi1"><br><br>
+            <label>Derece : </label>
+            <input type="text" id="sayi2"><br><br>
+            <input type="button" id="btnA" value="DÖNÜŞTÜR D=F">
+            <input type="button" id="btnB" value="DÖNÜŞTÜR F=D">
+              <input type="button" id="btnC" value="C">
+        </form>
+        <br>
+        <div id="kutuAlan"></div>
+    <script>var btn1=document.getElementById("btnA");
+      var btn2=document.getElementById("btnB");
+          var btnC=document.getElementById("btnC");
+    btnC.onclick=function()
+   {
+    window.location.reload()
+   }
+      btn2.onclick=function(){
+          var s1=Number(document.getElementById("sayi1").value);
+          var s2=Number(document.getElementById("sayi2").value);
+          var f=s1*-17.2222222;
+
+          document.getElementById("kutuAlan").innerHTML="Derece : "+f;
+
+      }
+      </script>
+
+
+              <div id="kutuA"></div>
+              <script>
+      btn1.onclick=function(){
+          var s1=Number(document.getElementById("sayi1").value);
+          var s2=Number(document.getElementById("sayi2").value);
+          var d=s2*33.80000;
+
+          document.getElementById("kutuA").innerHTML="Fahrenhayt : "+d;
+
+      }
+        </script>
+        <button type="btn5" onclick="window.location='H20.html';"class="btn btn-warning">Exit</button>
+
+</body>
+</html>
