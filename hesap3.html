@@ -14,6 +14,7 @@
                     <input type="button" id="btn3" value="x, %y kadar azaltılırsa kaç olur?">
                         <input type="button" id="btn4" value="x, %y kadar artırılırsa kaç olur?">
 
+<input type="button" id="btn2" value="x,y'nin yüzde kacı olur?">
               <input type="button" id="btnC" value="C">
         </form>
         <br>
@@ -57,6 +58,19 @@
 
       }
         </script>
+        <div id="kutuYüzde"></div>
+        <script>var btn2=document.getElementById("btn2");
+
+
+          btn2.onclick=function(){
+              var s1=Number(document.getElementById("sayi1").value);
+              var s2=Number(document.getElementById("sayi2").value);
+              var bölüm=s2/s1/100;
+
+              document.getElementById("kutuAlan").innerHTML="Sonuç : "+bölüm;
+
+          }
+                  </script>
 
         <button type="btn5" onclick="window.location='math.html';"class="btn btn-warning">Exit</button>
 
