@@ -40,7 +40,8 @@
       btn3.onclick=function(){
           var s1=Number(document.getElementById("sayi1").value);
           var s2=Number(document.getElementById("sayi2").value);
-          var fark=s1-s1*s2/100;
+            var yüzde=s1*s2/100;
+          var fark=s2-yüzde;
 
           document.getElementById("kutuFark").innerHTML="Sonuç : "+fark;
 
@@ -52,7 +53,8 @@
       btn4.onclick=function(){
           var s1=Number(document.getElementById("sayi1").value);
           var s2=Number(document.getElementById("sayi2").value);
-          var toplam=s1+s1*s2/100;
+            var yüzde=s1*s2/100;
+          var toplam=yüzde+s2;
 
           document.getElementById("kutuToplam").innerHTML="Sonuç : "+toplam;
 

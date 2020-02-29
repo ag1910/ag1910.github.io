@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+  <head>Lütfen butonları okuyun aksi takdirde yanlış bir şeyi dönüştürürsünüz.
     <meta charset="utf-8">
     <title>sıcaklık hesaplama</title>
   </head>
@@ -10,8 +10,8 @@
       <input type="text" id="sayi1"><br><br>
             <label>Derece : </label>
             <input type="text" id="sayi2"><br><br>
-            <input type="button" id="btnA" value="DÖNÜŞTÜR D=F">
-            <input type="button" id="btnB" value="DÖNÜŞTÜR F=D">
+            <input type="button" id="btnA" value="DÖNÜŞTÜR Derece=Fahrenhayt">
+            <input type="button" id="btnB" value="DÖNÜŞTÜR Fahrenhayt=Derece">
               <input type="button" id="btnC" value="C">
         </form>
         <br>
@@ -19,6 +19,7 @@
     <script>var btn1=document.getElementById("btnA");
       var btn2=document.getElementById("btnB");
           var btnC=document.getElementById("btnC");
+
     btnC.onclick=function()
    {
     window.location.reload()
@@ -27,7 +28,7 @@
           var s1=Number(document.getElementById("sayi1").value);
           var s2=Number(document.getElementById("sayi2").value);
           var f=s1*-17.2222222;
-
+alert("Dereceyi fahrenhayta dönüştürdünüz!")
           document.getElementById("kutuAlan").innerHTML="Derece : "+f;
 
       }
@@ -40,6 +41,7 @@
           var s1=Number(document.getElementById("sayi1").value);
           var s2=Number(document.getElementById("sayi2").value);
           var d=s2*33.80000;
+          alert("Fahrenhaytı dereceye dönüştürdünüz!")
 
           document.getElementById("kutuA").innerHTML="Fahrenhayt : "+d;
 
